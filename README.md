@@ -7,7 +7,7 @@ This is a realtime voting app built with ReactJs and Ably.io
 ### To build the app locally: 
 
 ```
-navigate to 'server' folde
+navigate to '/server' folder
 ```
 
 ```
