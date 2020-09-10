@@ -1,8 +1,22 @@
-# realtime-voting-app
-It is a realtime voting app which uses ably platform 
-# How to make this work 
- Clone this repo and run **npm install**
- ## For staring server
- **node server.js**
-## For running client side 
-Go to the voting-app and run **npm start**
+## Realtime-voting-app
+
+This is a realtime voting app built with ReactJs and Ably.io
+
+
+
+### To build the app locally: 
+
+```
+navigate to 'server' folde
+```
+
+```
+npm install
+npm run client-install
+```
+### For starting the app
+```
+npm run dev
+```
+Then open localhost:3000 in a browser.
+
