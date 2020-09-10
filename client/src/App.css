@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.headerText {
+  margin-top: 5%;
+}
+
+.main-heading{
+  margin-top: 5%;
+}
+
+.main-btn-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-btn-section .show-stats-btn{
+  width: 100px;
+  align-self: center;
+  margin-top: 20px;
+}
