@@ -12,9 +12,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "client-install": "npm install --prefix ../client",
+    "client-install": "npm install --prefix voting-app",
     "start": "node server.js",
-    "start-client": "npm start --prefix ../client",
+    "start-client": "npm start --prefix voting-app",
     "dev": "concurrently \"npm start\" \"npm run start-client\""
   },
   "author": "",
