@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import * as Ably from "ably";
 import "./voting.css";
-import { Link } from "react-router-dom";
+import Dashboard from './Dashboard';
+
 
 class Voting extends Component {
   state = {
@@ -35,12 +36,12 @@ class Voting extends Component {
   render() {
     const hasVoted = !!this.state.flipped;
     return (
-      <div>
-        <h1 className="headerText">Vote for your favourite team</h1>
+      <React.Fragment>
+        <h1 className="voting-heading">Vote for your favourite team</h1>
         <div className="voting-main">
           {this.state.cards.map((card) => {
             return (
-              <section key={card.id} className="container">
+              <section key={card.id} className="card-container">
                 <div
                   className={`card ${
                     this.state.flipped === card ? "flipped" : ""
@@ -54,10 +55,10 @@ class Voting extends Component {
             );
           })}
         </div>
-        <Link to="/dashboard" target="blank" className="show-stats-btn">
-          Show Dashboard
-        </Link>
-      </div>
+        <button className="refresh-btn" onClick={()=>this.setState({flipped:null})}>Refresh</button>
+        <p><strong>You can vote again by clicking refresh button to see this demo working.</strong></p>
+        <Dashboard/>
+      </React.Fragment>
     );
   }
 }

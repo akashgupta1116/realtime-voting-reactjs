@@ -56,7 +56,7 @@ class Dashboard extends Component {
         }
       }
     };
-    return <Doughnut data={data} options={options} />;
+    return <Doughnut className="graph" data={data} options={options} />;
   }
 }
 
