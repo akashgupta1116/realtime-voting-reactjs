@@ -55,8 +55,8 @@ class Voting extends Component {
             );
           })}
         </div>
-        <button className="refresh-btn" onClick={()=>this.setState({flipped:null})}>Refresh</button>
-        <p><strong>You can vote again by clicking refresh button to see this demo working.</strong></p>
+        <button className="refresh-btn" onClick={()=>this.setState({flipped:null})}>Vote Gain</button>
+        <p><strong>You can vote again by clicking this button to see this demo working.</strong></p>
         <Dashboard/>
       </React.Fragment>
     );
