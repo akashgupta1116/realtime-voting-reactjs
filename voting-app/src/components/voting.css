@@ -1,15 +1,16 @@
-
 .voting-main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: 4%;
 }
-.voting-heading{
+
+.voting-heading {
   margin-top: 0px;
   padding-top: 3%;
   margin-bottom: 3%;
 }
+
 .card-container {
   width: 200px;
   height: 260px;
@@ -21,9 +22,11 @@
   perspective: 800px;
   margin-bottom: 20px;
 }
+
 .remove-mouse-pointer:hover {
   cursor: not-allowed;
 }
+
 .card {
   width: 100%;
   height: 100%;
@@ -38,9 +41,11 @@
   transform-style: preserve-3d;
   -webkit-transform-origin: 50% 50%;
 }
+
 .pointer:hover {
   cursor: pointer;
 }
+
 .card div {
   display: block;
   height: 100%;
@@ -56,9 +61,11 @@
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
 .card .front {
   background: red;
 }
+
 .card .back {
   background: blue;
   -webkit-transform: rotateY(180deg);
@@ -67,13 +74,15 @@
   transform: rotateY(180deg);
   font-size: 15px;
 }
+
 .card.flipped {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.refresh-btn{
+
+.refresh-btn {
   background-color: black;
   font-size: 20px;
   color: white;
@@ -83,7 +92,8 @@
   border-radius: 5px;
   font-weight: bold;
 }
-.refresh-btn:hover{
+
+.refresh-btn:hover {
   background-color: white;
   color: black;
   border: 1px solid black;
