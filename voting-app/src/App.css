@@ -18,9 +18,22 @@
   font-size: 20px;
 }
 
+.main-btn-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  background-color: rgb(226, 224, 224);
+  margin: 0 auto;
+  padding-bottom: 20px;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  border-radius: 2px;
+
+}
+
 .show-stats-btn {
   align-self: center;
-  width: 200px;
+  width: 25%;
   margin-top: 20px;
   background-color: black;
   font-size: 20px;
@@ -40,12 +53,6 @@
   text-decoration: none;
 }
 
-.main-btn-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .footer {
   text-align: center;
   background-color: black;
@@ -59,4 +66,15 @@
 
 .footer a {
   color: white;
+}
+
+@media only screen and (max-width: 730px) {
+  .show-stats-btn {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .show-stats-btn {
+    font-size: 10px;
+  }
 }
