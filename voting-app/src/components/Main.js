@@ -9,7 +9,7 @@ const Main = () => (
       <Link to="/voting" target="_blank" className="show-stats-btn">
         Voting App
       </Link>
-      <a href="#" target="blank" className="show-stats-btn">Article</a>
+      <a href="#" target="blank" className="article">Learn how to build this Voting App.</a>
     </div>
     <div className="footer">
       <p>Powered by <a href="https://www.ably.io/" target = "blank">Ably Realtime</a></p>

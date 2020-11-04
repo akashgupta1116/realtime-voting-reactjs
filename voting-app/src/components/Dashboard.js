@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import * as Ably from "ably";
 import { Doughnut } from "react-chartjs-2";
 
+let realTime = null;
+let myVotingChannel = null;
 class Dashboard extends Component {
+ 
   state = {
     votes: {
       barcelona: 0,
@@ -12,10 +15,10 @@ class Dashboard extends Component {
   };
 
   componentDidMount() {
-    const realTime = new Ably.Realtime({ authUrl: "/subscribe" });
+    realTime = new Ably.Realtime({ authUrl: "/subscribe" });
     realTime.connection.once("connected", () => {
       // create the channel object
-      const myVotingChannel = realTime.channels.get("Voting-App");
+      myVotingChannel = realTime.channels.get("Voting-App");
       myVotingChannel.subscribe("vote", (msg) => {
         this.setState({
           votes: {
@@ -26,7 +29,10 @@ class Dashboard extends Component {
       });
     });
   }
-
+  componentWillUnmount(){
+    myVotingChannel.unsubscribe();
+    realTime.connection.off();
+  }
   render() {
     const data = {
       labels: ["Barcelona", "Real Madrid", "Juventus"],

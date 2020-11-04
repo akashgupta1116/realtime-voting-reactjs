@@ -3,6 +3,7 @@
   background-repeat: repeat-y;
   background-image: url('./image/y-so-serious-white.png');
   background-size: 100vw;
+  padding-bottom: 100px;
 }
 
 .main-container {
@@ -52,6 +53,13 @@
   border: 1px solid black;
   text-decoration: none;
 }
+.article{
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+
 
 .footer {
   text-align: center;
@@ -75,6 +83,9 @@
 }
 @media only screen and (max-width: 300px) {
   .show-stats-btn {
+    font-size: 10px;
+  }
+  .article{
     font-size: 10px;
   }
 }
