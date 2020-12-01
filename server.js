@@ -1,6 +1,7 @@
 const express = require("express");
 const envConfig = require("dotenv").config();
 const Ably = require("ably");
+const path = require('path');
 const cors = require("cors");
 
 const app = express();
@@ -9,13 +10,9 @@ const realtime = Ably.Realtime({
   key: process.env.ABLY_API_KEY,
 });
 
-app.use(express.static("/voting-app/build"));
-app.get("/", (request, response) => {
-  response.sendFile(__dirname + "/voting-app/public/index.html");
-});
+app.use(express.static(path.join(__dirname, 'voting-app/build')));
 
 app.get("/publish", (request, response) => {
-  // assign each front-end client a unique clientId
   const tokenParams = {
     capability: '{"*":["publish"]}',
   };
@@ -23,7 +20,6 @@ app.get("/publish", (request, response) => {
 });
 
 app.get("/subscribe", (request, response) => {
-  // assign each front-end client a unique clientId
   const tokenParams = {
     capability: '{"*":["subscribe"]}',
   };

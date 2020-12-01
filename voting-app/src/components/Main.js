@@ -6,7 +6,7 @@ const Main = () => (
     <h1 className="main-heading">Voting app</h1>
     <h5>Hi Folks!! Welcome to the Realtime Voting App</h5>
     <div className="main-btn-section">
-      <Link to="/voting" target="_blank" className="show-stats-btn">
+      <Link to="/voting" className="show-stats-btn">
         Voting App
       </Link>
       <a href="#" target="blank" className="article">Learn how to build this Voting App.</a>

@@ -15,7 +15,8 @@
     "client-install": "npm install --prefix voting-app",
     "start": "node server.js",
     "start-client": "npm start --prefix voting-app",
-    "dev": "concurrently \"npm start\" \"npm run start-client\""
+    "dev": "concurrently \"npm start\" \"npm run start-client\"",
+    "heroku-postbuild":"npm install -prefix voting-app && npm run build --prefix voting-app"
   },
   "author": "",
   "license": "ISC"
